@@ -1,0 +1,18 @@
+val r = Criterias.checkRulesV6Eurasie
+
+scala> val rr= r.filter(_.ruleNewTargetRpName.length>0).map(x => (x.rpName,x.rul
+eSeqNbr,x.ruleNewTargetRpName))
+
+
+
+scala> rr.filter(_._3=="CN2pSHI")
+res13: List[(String, String, java.lang.String)] = List((CN2_Default,333,CN2pSHI) , (_SI_to_SWIFT,150740,CN2pSHI))
+
+
+scala> val t = History.getPathInst("310C6FAEFC8DFD67",0)
+t: Any = List((SMQS_From_MQSeries,None), (FOFS_filter,Some((SMQS_From_MQSeries,3 858))),(_SI_to_SWIFT,Some((FOFS_filter,151400))), (_SI_to_SWIFT,Some((_SI_to_SWIFT,150900))))
+
+
+
+
+
