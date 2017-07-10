@@ -126,7 +126,12 @@ class QueryMesgFile(file:String/*,u:List[String]*/) extends MesgFile(file) with 
     
    val lineMesg = myMap.apply(umid)
     
-   val sens = "I"
+   //val sens = "I"   
+    val sens = lineMesg(posSens) match {                     
+      case "OUTPUT" => "O"                     
+      case "INPUT" => "I"                     
+      case _ => "?"                   
+    }
    val sender = lineMesg(posSender)
    val receiver = lineMesg(posReceiver)
    val mt = lineMesg(posMt)
