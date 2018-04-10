@@ -1,0 +1,4 @@
+-Dhttp.proxySet=true
+-Dhttps.proxyHost=<>
+-Dhttps.proxyPort=8080
+-Xmx1200m
